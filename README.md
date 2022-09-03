@@ -36,9 +36,9 @@ const app = new PhoneMaskInput({
 export default app
 ```
 
-# using prepared bundle:
+### using prepared bundle:
 
-```js
+```html
   <div id="app"></div>  
   <script src="https://unpkg.com/svelte-mask@0.2.6/build/bundle.js"></script>
   <script>

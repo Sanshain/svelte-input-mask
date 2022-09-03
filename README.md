@@ -9,7 +9,7 @@ Input mask component for phone number input:
 ```js
 import PhoneMaskInput from './svelte-mask.svelte'
 
-const app = new InputMask({
+const app = new PhoneMaskInput({
   target: document.getElementById('app')
 })
 

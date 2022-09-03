@@ -21,6 +21,8 @@ Features:
 
 ## Using inside vanile app:
 
+### using modules:
+
 ```js
 import PhoneMaskInput from 'svelte-mask'
 
@@ -32,6 +34,16 @@ const app = new PhoneMaskInput({
 })
 
 export default app
+```
+
+# using prepared bundle:
+
+```js
+  <div id="app"></div>  
+  <script src="https://unpkg.com/svelte-mask@0.2.6/build/bundle.js"></script>
+  <script>
+      createMaskInput('app', '+7(999)9999999')        
+  </script>
 ```
 
 ## PS:

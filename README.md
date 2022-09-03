@@ -5,7 +5,7 @@ The simplest component of an input mask with validation for digits of a given fo
 ![image](https://user-images.githubusercontent.com/40761960/188269627-0d395369-31e7-4b46-81f3-802b5ef04c9c.png)
 
 Features:
-- The minified bundle weighs less than 3kb
+- The minified bundle weighs less than 5kb
 - universal validation for any numeric formats
 
 ## Using inside Svelte app:

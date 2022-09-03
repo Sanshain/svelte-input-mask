@@ -1,6 +1,6 @@
 # svelte-input-mask
 
-Input mask component for phone number input:
+The simplest input mask component for phone number input:
 
 ![image](https://user-images.githubusercontent.com/40761960/188269627-0d395369-31e7-4b46-81f3-802b5ef04c9c.png)
 

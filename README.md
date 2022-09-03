@@ -8,7 +8,7 @@ The simplest input mask component for phone number input:
 
 ```html
 <script>
-  import PhoneMaskInput from './svelte-mask.svelte'
+  import PhoneMaskInput from 'svelte-mask'
 </script>
 
 <PhoneMaskInput originHolder="+0(000)0000000" />
@@ -18,7 +18,7 @@ The simplest input mask component for phone number input:
 ## Using inside vanale app:
 
 ```js
-import PhoneMaskInput from './svelte-mask.svelte'
+import PhoneMaskInput from 'svelte-mask'
 
 const app = new PhoneMaskInput({
   target: document.getElementById('app')

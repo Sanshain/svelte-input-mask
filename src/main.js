@@ -1,9 +1,12 @@
 import './app.css'
 
-import InputMask from './InputMask.svelte'
+import PhoneMaskInput from './PhoneMaskInput.svelte'
 
-const app = new InputMask({
-  target: document.getElementById('app')
+const app = new PhoneMaskInput({
+  target: document.getElementById('app'),
+  props: {
+    originHolder: '+0(000)0000000'
+  }
 })
 
 export default app

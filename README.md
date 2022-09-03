@@ -1,6 +1,6 @@
 # svelte-input-mask
 
-The simplest component of an input mask with validation for digits of a given format, which can contain arbitrary non-numeric characters. For example, a mask for entering a phone number: `+7(777)7777777`
+The simplest component of an input mask with validation for digits of a given format, which can contain arbitrary non-numeric characters.
 
 Features:
 - The minified bundle weighs less than 3kb

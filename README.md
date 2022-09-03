@@ -36,4 +36,4 @@ export default app
 
 ## PS:
 
-if you found this component useful, you can show it by clicking on the star
+*if you found this component useful, you can show it by clicking on the star*

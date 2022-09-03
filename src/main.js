@@ -1,7 +1,8 @@
 import './app.css'
-import App from './App.svelte'
 
-const app = new App({
+import InputMask from './InputMask.svelte'
+
+const app = new InputMask({
   target: document.getElementById('app')
 })
 

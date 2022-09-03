@@ -1,6 +1,6 @@
 <script>
   
-  const originHolder = '+7(000)0000000'
+  export let originHolder = '+7(000)0000000'
   
   /**
    * @type {HTMLElement}
@@ -26,7 +26,7 @@
    
     console.log(event);
 
-    if (~['insertText', ].indexOf(event.inputType)) {
+    if (~['insertText', 'insertFromPaste'].indexOf(event.inputType)) {
       
       console.log(event.inputType);
       let autoValue = validate(event.inputType, event);
@@ -37,7 +37,7 @@
       }
       
       formatHolder(autoValue)
-    }    
+    }
     else if (~['deleteContentBackward', 'deleteContentForward'].indexOf(event.inputType)){
       console.log(event);
       // проверяем регуляркой:
@@ -64,7 +64,7 @@
     if (data && data.length === 1){
 
       if (!value.length){
-        if (Number.parseInt(data)){
+        if (!Number.isNaN(Number.parseInt(data))){
           value = '+' + data;
           event.target.value = value;
           return value;
@@ -72,25 +72,29 @@
         else if(data === '+') return false;
       }
       else if (value.length == 2){
-        if (Number.parseInt(data)){
+        if (!Number.isNaN(Number.parseInt(data))){
           value += '(' + data;
           event.target.value = value;
           return value;
         }        
       }
       else if (value.length == 6){
-        if (Number.parseInt(data)){
+        if (!Number.isNaN(Number.parseInt(data))){
           value += ')' + data;
           event.target.value = value;
           return value;
         }        
       }
-      else if (Number.parseInt(data) && value.length < 14){
+      else if (!Number.isNaN(Number.parseInt(data)) && value.length < 14){
         value += data;
         event.target.value = value;
         return value;
       }
 
+    }
+    else if (data && data.length > 1 && data.length < 13){
+      // if (data.match(/\d/))
+      return false;
     }
 
     return false;
@@ -118,7 +122,7 @@
   }
   .placeholder{
     position: absolute;
-    top: 0.45em;
+    top: 0.65em;
     left: 0.6em;
     pointer-events: none;
     color: gray;

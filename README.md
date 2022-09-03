@@ -40,6 +40,7 @@ export default app
 
 ```html
   <div id="app"></div>  
+  <link rel="stylesheet" href="https://unpkg.com/svelte-mask@0.2.6/build/css/app.css">
   <script src="https://unpkg.com/svelte-mask@0.2.6/build/bundle.js"></script>
   <script>
       createMaskInput('app', '+7(999)9999999')        

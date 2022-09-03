@@ -5,14 +5,16 @@ import svelte from 'rollup-plugin-svelte';
 import css from "rollup-plugin-css-only";
 import { uglify } from "rollup-plugin-uglify";
 
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 
 export default {
-  input: 'src/main.js',
+  input: 'src/app.js',
   output: {
     file: 'build/bundle.js',
     format: 'iife',
-    name: 'PhoneMaskInput'
+    name: 'createMaskInput'
   },
   plugins: [
     css({ output: "css/app.css" }),
@@ -70,6 +72,11 @@ export default {
         handler(warning);
       }
     }),
+    resolve({
+      browser: true,
+      dedupe: ['svelte']
+    }),
+    commonjs(),
     uglify()
   ]
 }

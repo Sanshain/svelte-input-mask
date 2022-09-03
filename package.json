@@ -1,7 +1,7 @@
 {
   "name": "svelte-mask",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.2.5",
   "type": "module",
   "main": "index.js",
   "repository": "https://github.com/Sanshain/svelte-input-mask",
@@ -17,13 +17,15 @@
   "author": "Sanshain",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-uglify": "^6.0.4",    
+    "rollup-plugin-css-only": "^3.1.0",    
+    "@rollup/plugin-commonjs": "^22.0.2",
     "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "vite": "^3.0.7"
   },
-  "dependencies": {
+  "dependencies": {    
     "svelte": "^3.49.0"
   }
 }

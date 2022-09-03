@@ -100,7 +100,7 @@
       //     return value;
       //   }        
       // }
-      if (!Number.isNaN(Number.parseInt(data)) && value.length < 14){
+      if (!Number.isNaN(Number.parseInt(data)) && value.length < originHolder.length){
         value += data;
         event.target.value = value;
         return value;

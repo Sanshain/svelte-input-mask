@@ -11,7 +11,7 @@ The simplest input mask component for phone number input:
   import PhoneMaskInput from 'svelte-mask'
 </script>
 
-<PhoneMaskInput originHolder="+0(000)0000000" />
+<PhoneMaskInput originHolder="+7(000)0000000" />
 ```
 
 
@@ -23,7 +23,7 @@ import PhoneMaskInput from 'svelte-mask'
 const app = new PhoneMaskInput({
   target: document.getElementById('app'),
   props: {
-    originHolder: '+0(000)0000000'
+    originHolder: '+7(000)0000000'
   }  
 })
 

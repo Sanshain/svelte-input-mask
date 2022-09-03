@@ -6,6 +6,17 @@ Input mask component for phone number input:
 
 ## Using inside Svelte app:
 
+```html
+<script>
+  import PhoneMaskInput from './svelte-mask.svelte'
+</script>
+
+<PhoneMaskInput originHolder="+0(000)0000000" />
+```
+
+
+## Using inside vanale app:
+
 ```js
 import PhoneMaskInput from './svelte-mask.svelte'
 
@@ -14,6 +25,5 @@ const app = new PhoneMaskInput({
 })
 
 export default app
-
 ```
 

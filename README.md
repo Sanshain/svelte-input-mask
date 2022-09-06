@@ -8,6 +8,8 @@ Features:
 - The minified bundle weighs less than 5kb
 - universal validation for any numeric formats
 
+[Demo](https://coding-style.ru/code_reviews/271/edit)
+
 ## Using inside Svelte app:
 
 ```html
@@ -39,10 +41,10 @@ export default app
 ### using prepared bundle:
 
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/svelte-mask@0.2.6/build/css/app.css">  
+  <link rel="stylesheet" href="https://unpkg.com/svelte-mask@latest/build/css/app.css">  
 
   <div id="app"></div>    
-  <script src="https://unpkg.com/svelte-mask@0.2.6/build/bundle.js"></script>
+  <script src="https://unpkg.com/svelte-mask@latest/build/bundle.js"></script>
   <script>
       createMaskInput('app', '+7(999)9999999')        
   </script>

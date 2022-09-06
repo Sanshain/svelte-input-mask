@@ -1,8 +1,8 @@
 {
   "name": "svelte-mask",
   "private": false,
-  "version": "0.2.7",
-  "type": "module",
+  "version": "0.3.2",
+  "type": "module",  
   "main": "index.js",
   "repository": "https://github.com/Sanshain/svelte-input-mask",
   "scripts": {

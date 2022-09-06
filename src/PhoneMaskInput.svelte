@@ -1,6 +1,10 @@
 <script>
   
-  export let originHolder = '+7(000)0000000'
+  export let originHolder = '+7(000)0000000';
+  /**
+   * @type {string|Array<string>} - `${'_'|'*'|'-'}`
+   */
+  export let exceptNotNumbers = [];
   
   /**
    * @type {HTMLElement}
@@ -10,14 +14,17 @@
   let holderOffset = 0;
   let value = '';
 
-  let notNumbers = Array.from(originHolder).reduce((acc, c, i, arr) => ((Number.isNaN(Number.parseInt(c)) ? (acc[i] = c) : ''), acc), [])
+  /**
+   * 
+   */
+  let notNumbers = Array.from(originHolder).reduce((acc, c, i, arr) => ((!~exceptNotNumbers.indexOf(c) && Number.isNaN(Number.parseInt(c)) ? (acc[i] = c) : ''), acc), [])
 
   /**
   * @param {InputEvent} event
   */
   function onInput(event) {    
     
-    // console.log(event);
+    console.log(event);
 
 
     const formatHolder = (autoValue) => {

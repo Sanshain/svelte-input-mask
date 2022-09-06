@@ -16,6 +16,9 @@
   * @param {InputEvent} event
   */
   function onInput(event) {    
+    
+    // console.log(event);
+
 
     const formatHolder = (autoValue) => {
       let len = (autoValue || event.target.value).length;
@@ -30,7 +33,6 @@
 
     if (~['insertText', 'insertFromPaste'].indexOf(event.inputType)) {
       
-      // console.log(event.inputType);
       let autoValue = validate(event.inputType, event);
       if (autoValue === false){
         event.target.value = value;
@@ -117,14 +119,15 @@
 </script>
 
 <div class="container">
-  <input type="text" on:input={onInput} bind:value>
+  <input type="tel" on:input={onInput} bind:value>
   <div class="placeholder" style={`margin-left: ${holderOffset}px;`}>{holderValue}</div>  
   <div class="mask" bind:this={shadowElement}>{value}</div>
 </div>
 
 <style>
   *{
-    font-family: Arial;
+    font-family: Arial !important;
+    font-size: medium !important;
   }
   .container{
     position: relative;
@@ -140,7 +143,7 @@
     top: 0.65em;
     left: 0.6em;
     pointer-events: none;
-    color: gray;
+    color: lightgrey;
   }
   .mask{
     visibility: hidden;

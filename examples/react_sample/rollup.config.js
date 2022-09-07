@@ -25,6 +25,7 @@ export default [
     {
         input: 'app.jsx',
         output: {
+            sourcemap: true,
             file: './build/bundle.js',
             format: 'iife',
             globals: {
@@ -76,6 +77,7 @@ export default [
                 transforms: {
                     dangerousTaggedTemplateString: true,
                     forOf: false,
+                    templateString: false,
                     // dangerousForOf: true,
                     // asyncAwait: false
                 },

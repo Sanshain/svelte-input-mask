@@ -25,7 +25,7 @@
   */
   function onInput(event) {    
     
-    console.log(event);
+    // console.log(event);
 
 
     const formatHolder = (autoValue) => {
@@ -34,7 +34,7 @@
       holderValue = originHolder.slice(len);
       setTimeout(() => {
         holderOffset = shadowElement.offsetWidth;
-      })      
+      })
     }
    
     // console.log(event);

@@ -1,7 +1,7 @@
 {
   "name": "svelte-mask",
   "private": false,
-  "version": "0.3.2",
+  "version": "0.3.5",
   "type": "module",  
   "main": "src/PhoneMaskInput.svelte",
   "repository": "https://github.com/Sanshain/svelte-input-mask",

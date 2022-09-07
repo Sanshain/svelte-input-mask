@@ -7,7 +7,10 @@ const app = new PhoneMaskInput({
   props: {
     // originHolder: '+0(000)0000000'
     originHolder: '+0(___)_______',
-    exceptNotNumbers: ['_']
+    exceptNotNumbers: ['_'],
+    onComplete: v => {
+      console.log(v);
+    }
   }
 })
 

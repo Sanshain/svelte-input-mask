@@ -33,16 +33,24 @@ const App =  () => {
 
     useEffect(() => {
                                        
-        let widget = new PhoneMaskInput({ target: inputContainer.current })
+        let widget = new PhoneMaskInput({
+            target: inputContainer.current,
+            props: {
+                onComplete: v => {
+                    console.log(v);
+                    setMsg(ov => v)
+                }
+            }
+        })        
         return () => {};
     }, []);
 
-    let [msg, setMsg] = useState(10);
+    let [msg, setMsg] = useState('');
 
     return <div className="App">        
-        <p onClick={() => setMsg(v => v + 1)} style={{ cursor: 'pointer', userSelect: null }}>
+        <p style={{ cursor: 'pointer', userSelect: null }}>
 
-            Click to change the value:
+            Enter complete number:
             <b className={'counter'}>
                 {msg}
             </b>

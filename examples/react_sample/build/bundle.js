@@ -7,7 +7,592 @@
 
     function S(n,t){for(var e in t){ n[e]=t[e]; }return n}function g(n,t){for(var e in n){ if("__source"!==e&&!(e in t)){ return !0; } }for(var r in t){ if("__source"!==r&&n[r]!==t[r]){ return !0; } }return !1}function C(n){this.props=n;}(C.prototype=new d$1).isPureReactComponent=!0,C.prototype.shouldComponentUpdate=function(n,t){return g(this.props,n)||g(this.state,t)};var w=l$1.__b;l$1.__b=function(n){n.type&&n.type.__f&&n.ref&&(n.props.ref=n.ref,n.ref=null),w&&w(n);};var A=l$1.__e;l$1.__e=function(n,t,e,r){if(n.then){ for(var u,o=t;o=o.__;){ if((u=o.__c)&&u.__c){ return null==t.__e&&(t.__e=e.__e,t.__k=e.__k),u.__c(n,t); } } }A(n,t,e,r);};var O=l$1.unmount;function T(){this.__u=0,this.t=null,this.__b=null;}function L(n){var t=n.__.__c;return t&&t.__a&&t.__a(n)}function D(){this.u=null,this.o=null;}l$1.unmount=function(n){var t=n.__c;t&&t.__R&&t.__R(),t&&!0===n.__h&&(n.type=null),O&&O(n);},(T.prototype=new d$1).__c=function(n,t){var e=t.__c,r=this;null==r.t&&(r.t=[]),r.t.push(e);var u=L(r.__v),o=!1,i=function(){o||(o=!0,e.__R=null,u?u(l):l());};e.__R=i;var l=function(){if(!--r.__u){if(r.state.__a){var n=r.state.__a;r.__v.__k[0]=function n(t,e,r){return t&&(t.__v=null,t.__k=t.__k&&t.__k.map(function(t){return n(t,e,r)}),t.__c&&t.__c.__P===e&&(t.__e&&r.insertBefore(t.__e,t.__d),t.__c.__e=!0,t.__c.__P=r)),t}(n,n.__c.__P,n.__c.__O);}var t;for(r.setState({__a:r.__b=null});t=r.t.pop();){ t.forceUpdate(); }}},c=!0===t.__h;r.__u++||c||r.setState({__a:r.__b=r.__v.__k[0]}),n.then(i,i);},T.prototype.componentWillUnmount=function(){this.t=[];},T.prototype.render=function(n,t){if(this.__b){if(this.__v.__k){var e=document.createElement("div"),r=this.__v.__k[0].__c;this.__v.__k[0]=function n(t,e,r){return t&&(t.__c&&t.__c.__H&&(t.__c.__H.__.forEach(function(n){"function"==typeof n.__c&&n.__c();}),t.__c.__H=null),null!=(t=S({},t)).__c&&(t.__c.__P===r&&(t.__c.__P=e),t.__c=null),t.__k=t.__k&&t.__k.map(function(t){return n(t,e,r)})),t}(this.__b,e,r.__O=r.__P);}this.__b=null;}var u=t.__a&&h$1(p$1,null,n.fallback);return u&&(u.__h=null),[h$1(p$1,null,t.__a?null:n.children),u]};var F=function(n,t,e){if(++e[1]===e[0]&&n.o.delete(t),n.props.revealOrder&&("t"!==n.props.revealOrder[0]||!n.o.size)){ for(e=n.u;e;){for(;e.length>3;){ e.pop()(); }if(e[1]<e[0]){ break; }n.u=e=e[2];} }};(D.prototype=new d$1).__a=function(n){var t=this,e=L(t.__v),r=t.o.get(n);return r[0]++,function(u){var o=function(){t.props.revealOrder?(r.push(u),F(t,n,r)):u();};e?e(o):o();}},D.prototype.render=function(n){this.u=null,this.o=new Map;var t=x(n.children);n.revealOrder&&"b"===n.revealOrder[0]&&t.reverse();for(var e=t.length;e--;){ this.o.set(t[e],this.u=[1,0,this.u]); }return n.children},D.prototype.componentDidUpdate=D.prototype.componentDidMount=function(){var n=this;this.o.forEach(function(t,e){F(n,e,t);});};var W="undefined"!=typeof Symbol&&Symbol.for&&Symbol.for("react.element")||60103,P=/^(?:accent|alignment|arabic|baseline|cap|clip(?!PathU)|color|dominant|fill|flood|font|glyph(?!R)|horiz|image|letter|lighting|marker(?!H|W|U)|overline|paint|pointer|shape|stop|strikethrough|stroke|text(?!L)|transform|underline|unicode|units|v|vector|vert|word|writing|x(?!C))[A-Z]/,$="undefined"!=typeof document,j=function(n){return ("undefined"!=typeof Symbol&&"symbol"==typeof Symbol()?/fil|che|rad/i:/fil|che|ra/i).test(n)};d$1.prototype.isReactComponent={},["componentWillMount","componentWillReceiveProps","componentWillUpdate"].forEach(function(n){Object.defineProperty(d$1.prototype,n,{configurable:!0,get:function(){return this["UNSAFE_"+n]},set:function(t){Object.defineProperty(this,n,{configurable:!0,writable:!0,value:t});}});});var H=l$1.event;function Z(){}function Y(){return this.cancelBubble}function q(){return this.defaultPrevented}l$1.event=function(n){return H&&(n=H(n)),n.persist=Z,n.isPropagationStopped=Y,n.isDefaultPrevented=q,n.nativeEvent=n};var J={configurable:!0,get:function(){return this.class}},K=l$1.vnode;l$1.vnode=function(n){var t=n.type,e=n.props,r=e;if("string"==typeof t){var u=-1===t.indexOf("-");for(var o in r={},e){var i=e[o];$&&"children"===o&&"noscript"===t||"value"===o&&"defaultValue"in e&&null==i||("defaultValue"===o&&"value"in e&&null==e.value?o="value":"download"===o&&!0===i?i="":/ondoubleclick/i.test(o)?o="ondblclick":/^onchange(textarea|input)/i.test(o+t)&&!j(e.type)?o="oninput":/^onfocus$/i.test(o)?o="onfocusin":/^onblur$/i.test(o)?o="onfocusout":/^on(Ani|Tra|Tou|BeforeInp|Compo)/.test(o)?o=o.toLowerCase():u&&P.test(o)?o=o.replace(/[A-Z0-9]/g,"-$&").toLowerCase():null===i&&(i=void 0),/^oninput$/i.test(o)&&(o=o.toLowerCase(),r[o]&&(o="oninputCapture")),r[o]=i);}"select"==t&&r.multiple&&Array.isArray(r.value)&&(r.value=x(e.children).forEach(function(n){n.props.selected=-1!=r.value.indexOf(n.props.value);})),"select"==t&&null!=r.defaultValue&&(r.value=x(e.children).forEach(function(n){n.props.selected=r.multiple?-1!=r.defaultValue.indexOf(n.props.value):r.defaultValue==n.props.value;})),n.props=r,e.class!=e.className&&(J.enumerable="className"in e,null!=e.className&&(r.class=e.className),Object.defineProperty(r,"className",J));}n.$$typeof=W,K&&K(n);};var Q=l$1.__r;l$1.__r=function(n){Q&&Q(n);};
 
+    function noop() { }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return function () { return node.removeEventListener(event, handler, options); };
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            { node.removeAttribute(attribute); }
+        else if (node.getAttribute(attribute) !== value)
+            { node.setAttribute(attribute, value); }
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_data(text, data) {
+        data = '' + data;
+        if (text.wholeText !== data)
+            { text.data = data; }
+    }
+    function set_input_value(input, value) {
+        input.value = value == null ? '' : value;
+    }
+    var HtmlTag = function HtmlTag(is_svg) {
+        if ( is_svg === void 0 ) is_svg = false;
+
+        this.is_svg = false;
+        this.is_svg = is_svg;
+        this.e = this.n = null;
+    };
+    HtmlTag.prototype.c = function c (html) {
+        this.h(html);
+    };
+    HtmlTag.prototype.m = function m (html, target, anchor) {
+            if ( anchor === void 0 ) anchor = null;
+
+        if (!this.e) {
+            if (this.is_svg)
+                { this.e = svg_element(target.nodeName); }
+            else
+                { this.e = element(target.nodeName); }
+            this.t = target;
+            this.c(html);
+        }
+        this.i(anchor);
+    };
+    HtmlTag.prototype.h = function h (html) {
+        this.e.innerHTML = html;
+        this.n = Array.from(this.e.childNodes);
+    };
+    HtmlTag.prototype.i = function i (anchor) {
+        for (var i = 0; i < this.n.length; i += 1) {
+            insert(this.t, this.n[i], anchor);
+        }
+    };
+    HtmlTag.prototype.p = function p (html) {
+        this.d();
+        this.h(html);
+        this.i(this.a);
+    };
+    HtmlTag.prototype.d = function d () {
+        this.n.forEach(detach);
+    };
+
+    var current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    var dirty_components = [];
+    var binding_callbacks = [];
+    var render_callbacks = [];
+    var flush_callbacks = [];
+    var resolved_promise = Promise.resolve();
+    var update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    var seen_callbacks = new Set();
+    var flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        var saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                var component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                { binding_callbacks.pop()(); }
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (var i = 0; i < render_callbacks.length; i += 1) {
+                var callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            var dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    var outroing = new Set();
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function mount_component(component, target, anchor, customElement) {
+        var ref = component.$$;
+        var fragment = ref.fragment;
+        var on_mount = ref.on_mount;
+        var on_destroy = ref.on_destroy;
+        var after_update = ref.after_update;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(function () {
+                var new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push.apply(on_destroy, new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        var $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty) {
+        if ( dirty === void 0 ) dirty = [-1];
+
+        var parent_component = current_component;
+        set_current_component(component);
+        var $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props: props,
+            update: noop,
+            not_equal: not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty: dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        var ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, function (i, ret) {
+                var rest = [], len = arguments.length - 2;
+                while ( len-- > 0 ) rest[ len ] = arguments[ len + 2 ];
+
+                var value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        { $$.bound[i](value); }
+                    if (ready)
+                        { make_dirty(component, i); }
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                var nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                { transition_in(component.$$.fragment); }
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    var SvelteComponent = function SvelteComponent () {};
+
+    SvelteComponent.prototype.$destroy = function $destroy () {
+        destroy_component(this, 1);
+        this.$destroy = noop;
+    };
+    SvelteComponent.prototype.$on = function $on (type, callback) {
+        var callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+        callbacks.push(callback);
+        return function () {
+            var index = callbacks.indexOf(callback);
+            if (index !== -1)
+                { callbacks.splice(index, 1); }
+        };
+    };
+    SvelteComponent.prototype.$set = function $set ($$props) {
+        if (this.$$set && !is_empty($$props)) {
+            this.$$.skip_bound = true;
+            this.$$set($$props);
+            this.$$.skip_bound = false;
+        }
+    };
+
+    /* node_modules\svelte-mask\src\PhoneMaskInput.svelte generated by Svelte v3.50.0 */
+
+    function create_fragment(ctx) {
+    	var div2;
+    	var input;
+    	var t0;
+    	var div0;
+    	var t1;
+    	var div0_style_value;
+    	var t2;
+    	var div1;
+    	var t3;
+    	var mounted;
+    	var dispose;
+
+    	return {
+    		c: function c() {
+    			div2 = element("div");
+    			input = element("input");
+    			t0 = space();
+    			div0 = element("div");
+    			t1 = text(/*holderValue*/ ctx[1]);
+    			t2 = space();
+    			div1 = element("div");
+    			t3 = text(/*value*/ ctx[3]);
+    			attr(input, "type", "tel");
+    			attr(input, "class", "svelte-1b22go2");
+    			attr(div0, "class", "placeholder svelte-1b22go2");
+    			attr(div0, "style", div0_style_value = `margin-left: ${/*holderOffset*/ ctx[2]}px;`);
+    			attr(div1, "class", "mask svelte-1b22go2");
+    			attr(div2, "class", "container svelte-1b22go2");
+    		},
+    		m: function m(target, anchor) {
+    			insert(target, div2, anchor);
+    			append(div2, input);
+    			set_input_value(input, /*value*/ ctx[3]);
+    			append(div2, t0);
+    			append(div2, div0);
+    			append(div0, t1);
+    			append(div2, t2);
+    			append(div2, div1);
+    			append(div1, t3);
+    			/*div1_binding*/ ctx[9](div1);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen(input, "input", /*onInput*/ ctx[4]),
+    					listen(input, "input", /*input_input_handler*/ ctx[8])
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function p(ctx, ref) {
+    			var dirty = ref[0];
+
+    			if (dirty & /*value*/ 8) {
+    				set_input_value(input, /*value*/ ctx[3]);
+    			}
+
+    			if (dirty & /*holderValue*/ 2) { set_data(t1, /*holderValue*/ ctx[1]); }
+
+    			if (dirty & /*holderOffset*/ 4 && div0_style_value !== (div0_style_value = `margin-left: ${/*holderOffset*/ ctx[2]}px;`)) {
+    				attr(div0, "style", div0_style_value);
+    			}
+
+    			if (dirty & /*value*/ 8) { set_data(t3, /*value*/ ctx[3]); }
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function d(detaching) {
+    			if (detaching) { detach(div2); }
+    			/*div1_binding*/ ctx[9](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	var originHolder = $$props.originHolder; if ( originHolder === void 0 ) originHolder = '+7(000)0000000';
+    	var exceptNotNumbers = $$props.exceptNotNumbers; if ( exceptNotNumbers === void 0 ) exceptNotNumbers = [];
+    	var onComplete = $$props.onComplete; if ( onComplete === void 0 ) onComplete = null;
+
+    	/**
+     * @type {HTMLElement}
+     */
+    	var shadowElement = null;
+
+    	var holderValue = originHolder;
+    	var holderOffset = 0;
+    	var value = '';
+
+    	/**
+     * 
+     */
+    	var notNumbers = Array.from(originHolder).reduce(
+    		function (acc, c, i, arr) { return (!~exceptNotNumbers.indexOf(c) && Number.isNaN(Number.parseInt(c))
+    		? acc[i] = c
+    		: '', acc); },
+    		[]
+    	);
+
+    	/**
+    * @param {InputEvent} event
+    */
+    	function onInput(event) {
+    		// console.log(event);
+    		var formatHolder = function (autoValue) {
+    			var len = (autoValue || event.target.value).length;
+    			$$invalidate(1, holderValue = originHolder.slice(len));
+
+    			setTimeout(function () {
+    				$$invalidate(2, holderOffset = shadowElement.offsetWidth);
+    			});
+    		};
+
+    		// console.log(event);
+    		if (~['insertText', 'insertFromPaste'].indexOf(event.inputType)) {
+    			var autoValue = validate(event.inputType, event);
+
+    			if (autoValue === false) {
+    				event.target.value = value;
+
+    				// value = event.target.value;
+    				return;
+    			}
+
+    			formatHolder(autoValue);
+    		} else if (~['deleteContentBackward', 'deleteContentForward'].indexOf(event.inputType)) {
+    			// console.log(event);
+    			// проверяем регуляркой:
+    			if (!(event.target.value.match(/\+\d\(\d{3}\)\d*/) || event.target.value.match(/\+\d\(\d{0,3}/) || event.target.value.match(/\+?/))) {
+    				event.target.value = value;
+    				return;
+    			}
+
+    			formatHolder('');
+    		}
+    	}
+
+    	/**
+     * 
+     * @param {string} typeInput // {"insertText"|"deleteContentBackward"}
+     * @param {InputEvent} event
+     */
+    	function validate(typeInput, event) {
+    		var data = event.data;
+
+    		// console.log(data);
+    		if (data && data.length === 1) {
+    			for (var i in notNumbers) {
+    				if (Object.hasOwnProperty.call(notNumbers, i)) {
+    					var char = notNumbers[+i];
+
+    					if (value.length == +i && !Number.isNaN(Number.parseInt(data))) {
+    						$$invalidate(3, value += char + data);
+    						event.target.value = value;
+    						return value;
+    					}
+    				} // else if(data === c) return false;
+    			}
+
+    			// if (value.length == 0){
+    			//   if (!Number.isNaN(Number.parseInt(data))){
+    			//     value = '+' + data;
+    			//     event.target.value = value;
+    			//     return value;
+    			//   }
+    			//   else if(data === '+') return false;
+    			// }
+    			// else if (value.length == 2){
+    			//   if (!Number.isNaN(Number.parseInt(data))){
+    			//     value += '(' + data;
+    			//     event.target.value = value;
+    			//     return value;
+    			//   }        
+    			// }
+    			// else if (value.length == 6){
+    			//   if (!Number.isNaN(Number.parseInt(data))){
+    			//     value += ')' + data;
+    			//     event.target.value = value;
+    			//     return value;
+    			//   }        
+    			// }
+    			if (!Number.isNaN(Number.parseInt(data)) && value.length < originHolder.length) {
+    				$$invalidate(3, value += data);
+    				event.target.value = value;
+
+    				if (value.length === originHolder.length && onComplete) { setTimeout(function () {
+    					onComplete(value);
+    				}); }
+
+    				return value;
+    			}
+    		} else if (data && data.length > 1 && data.length < 13) {
+    			// if (data.match(/\d/))
+    			return false;
+    		}
+
+    		return false;
+    	}
+
+    	function input_input_handler() {
+    		value = this.value;
+    		$$invalidate(3, value);
+    	}
+
+    	function div1_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](function () {
+    			shadowElement = $$value;
+    			$$invalidate(0, shadowElement);
+    		});
+    	}
+
+    	$$self.$$set = function ($$props) {
+    		if ('originHolder' in $$props) { $$invalidate(5, originHolder = $$props.originHolder); }
+    		if ('exceptNotNumbers' in $$props) { $$invalidate(6, exceptNotNumbers = $$props.exceptNotNumbers); }
+    		if ('onComplete' in $$props) { $$invalidate(7, onComplete = $$props.onComplete); }
+    	};
+
+    	return [
+    		shadowElement,
+    		holderValue,
+    		holderOffset,
+    		value,
+    		onInput,
+    		originHolder,
+    		exceptNotNumbers,
+    		onComplete,
+    		input_input_handler,
+    		div1_binding
+    	];
+    }
+
+    var PhoneMaskInput = /*@__PURE__*/(function (SvelteComponent) {
+    	function PhoneMaskInput(options) {
+    		SvelteComponent.call(this);
+
+    		init(this, options, instance, create_fragment, safe_not_equal, {
+    			originHolder: 5,
+    			exceptNotNumbers: 6,
+    			onComplete: 7
+    		});
+    	}
+
+    	if ( SvelteComponent ) PhoneMaskInput.__proto__ = SvelteComponent;
+    	PhoneMaskInput.prototype = Object.create( SvelteComponent && SvelteComponent.prototype );
+    	PhoneMaskInput.prototype.constructor = PhoneMaskInput;
+
+    	return PhoneMaskInput;
+    }(SvelteComponent));
+
     //@ts-check
+
+    // import { css, setup, styled } from "goober";
     // import "./styles.css";
 
     // setup(React.createElement);
@@ -32,16 +617,24 @@
 
         h(function () {
                                            
-            new PhoneMaskInput({ target: inputContainer.current });
+            new PhoneMaskInput({
+                target: inputContainer.current,
+                props: {
+                    onComplete: function (v) {
+                        console.log(v);
+                        setMsg(function (ov) { return v; });
+                    }
+                }
+            });        
             return function () {};
         }, []);
 
-        var ref = p(10);
+        var ref = p('');
         var msg = ref[0];
         var setMsg = ref[1];
 
         return h$1( 'div', { className: "App" },         
-            h$1( 'p', { onClick: function () { return setMsg(function (v) { return v + 1; }); }, style: { cursor: 'pointer', userSelect: null } }, "Click to change the value: ", h$1( 'b', { className: 'counter' }, 
+            h$1( 'p', { style: { cursor: 'pointer', userSelect: null } }, "Enter complete number: ", h$1( 'b', { className: 'counter' }, 
                     msg
                 )
             ), 
@@ -52,3 +645,4 @@
     P$1(h$1( App, null ), document.body);
 
 })();
+//# sourceMappingURL=bundle.js.map

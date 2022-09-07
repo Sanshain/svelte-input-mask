@@ -1,4 +1,4 @@
-:root {
+.svelte-1b22go2{font-family:Arial !important;font-size:medium !important}.container.svelte-1b22go2{position:relative}input.svelte-1b22go2{padding:.5em;border-radius:1em;font-size:medium}.placeholder.svelte-1b22go2{position:absolute;top:0.65em;left:0.6em;pointer-events:none;color:lightgrey}.mask.svelte-1b22go2{visibility:hidden;position:absolute}:root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   /* font-size: 16px;
   line-height: 24px;
@@ -38,4 +38,3 @@ body {
     background-color: #ffffff;
   }
 }
-.svelte-1o35fjr{font-family:Arial}.container.svelte-1o35fjr{position:relative}input.svelte-1o35fjr{padding:.5em;border-radius:1em;font-size:medium}.placeholder.svelte-1o35fjr{position:absolute;top:0.65em;left:0.6em;pointer-events:none;color:gray}.mask.svelte-1o35fjr{visibility:hidden;position:absolute}

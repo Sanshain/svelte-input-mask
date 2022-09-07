@@ -5,6 +5,7 @@
    * @type {string|Array<string>} - `${'_'|'*'|'-'}`
    */
   export let exceptNotNumbers = [];
+  export let onComplete = null;
   
   /**
    * @type {HTMLElement}
@@ -112,6 +113,10 @@
       if (!Number.isNaN(Number.parseInt(data)) && value.length < originHolder.length){
         value += data;
         event.target.value = value;
+        if (value.length === originHolder.length && onComplete)  setTimeout(() => 
+        {
+          onComplete(value);
+        })
         return value;
       }
 

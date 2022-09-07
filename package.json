@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.3.2",
   "type": "module",  
-  "main": "index.js",
+  "main": "src/PhoneMaskInput.svelte",
   "repository": "https://github.com/Sanshain/svelte-input-mask",
   "scripts": {
     "dev": "vite",

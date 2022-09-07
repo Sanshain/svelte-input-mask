@@ -28,6 +28,53 @@ npm i svelte-mask
 ```
 
 
+## Using inside Preact (exactly the same React) app:
+
+```jsx
+import { h } from 'preact';
+import { render } from 'preact';
+import React from "react";
+
+import { useState, useEffect, useRef } from "preact/hooks";
+
+import PhoneMaskInput from "svelte-mask";
+
+
+const App =  () => {
+
+    const inputContainer = useRef(null);
+
+    useEffect(() => {
+                                       
+        let widget = new PhoneMaskInput({
+            target: inputContainer.current,
+            props: {
+                onComplete: v => setMsg(() => v)
+            }
+        })        
+        return () => {};
+    }, []);
+
+    let [msg, setMsg] = useState('');
+
+    return <div className="App">        
+        <p style={{ cursor: 'pointer', userSelect: null }}>
+
+            Enter complete number:
+            <b className={'counter'}>
+                {msg}
+            </b>
+        </p>
+        <div ref={inputContainer}></div>
+    </div>
+};
+
+render(<App />, document.body);
+```
+
+Look up working example [here](https://github.com/Sanshain/svelte-input-mask/tree/main/examples/react_sample)
+
+
 ## Using inside vanile app:
 
 ### using modules:
@@ -56,6 +103,7 @@ export default app
       createMaskInput('app', '+7(999)9999999')        
   </script>
 ```
+
 
 ## PS:
 

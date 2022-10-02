@@ -105,6 +105,17 @@ export default app
 ```
 
 
+## Comparison with a contenders:
+
+|Name|size(min)|appreciated by the community|transparent mask|uneven rendering|
+|----|------|-|-|-|
+|svelte-mask|5kb|-|+|-|
+|@imask/svelte|59kb|+|-|+|
+|svelte-input-mask|?|+|-|+|
+|svelte-masked-input|?|-|+|-|
+|svelte-number-format|?|-|?|?|
+|svelte-inputs|?|-|?|?|
+
 ## PS:
 
 *if you found this component useful, you can show it by clicking on the star*

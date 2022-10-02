@@ -13,6 +13,7 @@
     "goober": "^2.1.11",
     "linaria": "^4.1.2",
     "preact": "^10.10.6",
+    "rollup-plugin-postcss": "^4.0.2",
     "svelte-mask": "^0.3.3"
   },
   "devDependencies": {

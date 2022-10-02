@@ -12,6 +12,8 @@ import alias from '@rollup/plugin-alias';
 import css from 'rollup-plugin-css-only';
 import linaria from '@linaria/rollup';
 import commonjs from '@rollup/plugin-commonjs';
+import postcss from 'rollup-plugin-postcss'
+
 
 
 const options = {
@@ -20,6 +22,7 @@ const options = {
         dirname: 'build',
     }
 }
+
 
 export default [
     {
@@ -36,6 +39,7 @@ export default [
         plugins: [
             
             css({ output: 'bundle.css' }),
+            
             svelte({
                 // By default, all .svelte and .html files are compiled
                 // extensions: ['.my-custom-extension'],
@@ -71,23 +75,37 @@ export default [
             }),
 
             buble({
-                jsx: 'h',
-                objectAssign: 'Object.assign',
+                jsx: 'h',                
+                objectAssign: 'Object.assign',                
                 // extensions: ['.js', '.ts'],
                 transforms: {
                     dangerousTaggedTemplateString: true,
-                    forOf: false,
+                    forOf: false,                    
+                    
+                    /// important for linaria:
                     templateString: false,
+
+                    /// another:
                     // dangerousForOf: true,
                     // asyncAwait: false
                 },
+            }),            
+
+            linaria({
+                sourceMap: process.env.NODE_ENV !== 'production',
+                // include: ['*.js']
             }),
 
-            ///!!! linaria only with babel (not buble as here) jsx transpiler:
+            // postcss({
+            //     extract: "build/bundle.css",
+            //     modules: true,
+            //     plugins: [],
+            //     minimize: false,
 
-            // linaria({
-            //     sourceMap: process.env.NODE_ENV !== 'production',
-            //     // include: ['*.js']
+            //     extensions: ['.css'],
+            //     // sourceMap: true,
+            //     // Or with custom file name
+            //     // extract: path.resolve('dist/my-custom-file-name.css')
             // }),
 
             resolve({
@@ -97,10 +115,14 @@ export default [
                 dedupe: [
                     'svelte',
                     // 'jsx'
-                ]
+                ],
+                // extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', 'css']
             }),
 
-            // commonjs()
+            
+            // commonjs(),
+
+            
 
             // uglify({
             // 	output: { comments: false },

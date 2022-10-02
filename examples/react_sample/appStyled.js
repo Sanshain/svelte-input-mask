@@ -1,6 +1,9 @@
 import { css } from 'linaria';
 
 
-export const appIntro = css`
-    color: red;
+export const descStyle = css`
+    color: green;
+    &:hover{
+        text-shadow: 0 0 15px gray;
+    }
 `;

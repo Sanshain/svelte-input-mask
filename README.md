@@ -107,14 +107,14 @@ export default app
 
 ## Comparison with a contenders:
 
-|Name|size(min)|appreciated by the community|transparent mask|uneven rendering|
-|----|------|-|-|-|
-|svelte-mask|5kb|-|+|-|
-|@imask/svelte|59kb|+|-|+|
-|svelte-input-mask|?|+|-|+|
-|svelte-masked-input|?|-|+|-|
-|svelte-number-format|?|-|?|?|
-|svelte-inputs|?|-|?|?|
+|Name|size(min)|appreciated by the community|transparent mask|uneven rendering|stable|
+|----|------|-|-|-|-|
+|svelte-mask|5kb|-|+|-|+|
+|@imask/svelte|59kb|+|-|+|+|
+|svelte-input-mask|13kb|+|-|+|+|
+|svelte-masked-input|?|-|+|-|?|
+|svelte-number-format|?|-|?|?|?|
+
 
 ## PS:
 
